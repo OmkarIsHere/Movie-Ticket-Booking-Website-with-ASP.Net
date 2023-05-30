@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LynxCinema.master.cs" Inherits="CinemaTicketBooking.LynxCinema" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <link rel="stylesheet" href="css/LynxMaster.css" />
+   
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="navigationbar">
+            <div id="navbar">
+            <div class="logo">
+            <image class="logo" alternate="logoimage" src="images/LynxCinemaLogo.jpeg"></image>
+           </div>
+                <div class="SearchBarContainer">
+                    <div class="SearchBar">                        
+                        <asp:TextBox ID="SearchInput" class="SearchBarInput" placeholder="Search movies or theaters.." runat="server"></asp:TextBox>
+                        <asp:Button ID="btnSearch" runat="server" class="SearchButton" OnClick="btnSearch_Click"  />
+                     </div>
+                </div>
+                <div class="SelectlocationContainer">
+                    <div class="Selectlocation " >
+                       <img src="images/navigation.png"  alt="location" class="locationImg"/>
+                        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="DropDownList">
+                            <asp:ListItem class="ListItem">Mumbai</asp:ListItem>
+                            <asp:ListItem class="ListItem">Kolkata</asp:ListItem>
+                            <asp:ListItem class="ListItem">Chennai</asp:ListItem>
+                            <asp:ListItem class="ListItem">Hyderabad</asp:ListItem>
+                            <asp:ListItem class="ListItem">Chandigarh</asp:ListItem>
+                            <asp:ListItem class="ListItem">Dehli-NCR</asp:ListItem>
+                            <asp:ListItem class="ListItem">Bengaluru</asp:ListItem>
+                            <asp:ListItem class="ListItem">Pune</asp:ListItem>
+                        </asp:DropDownList>
+                </div>
+             </div>
+                <div class="menuIconContainer">
+                 <button type="submit" class="menuIcon"></button>
+                </div>
+                </div>
+            <div id="navbar2">
+                  <div class="opt1">
+                <ul>
+                    <asp:HyperLink ID="HyperLink1" runat="server" CssClass="list" NavigateUrl="~/IMAX.aspx">IMAX</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink2" runat="server" CssClass="list">4DX</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink3" runat="server" CssClass="list">Playhouse</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink4" runat="server" CssClass="list">Gold</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink5" runat="server" CssClass="list">LUXE</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink6" runat="server" CssClass="list">ONYX</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink7" runat="server" CssClass="list">Director's Cut</asp:HyperLink>
+                   
+                   
+                </ul>
+
+            </div>
+            <div class="opt2">
+                <ul>
+                    <asp:HyperLink ID="HyperLink8" runat="server" CssClass="list">Cinemas</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink9" runat="server" CssClass="list">Offers</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink10" runat="server" CssClass="list">Advertise</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink11" runat="server" CssClass="list">Gift Cards</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink12" runat="server" CssClass="list">Movie Library</asp:HyperLink>
+                   
+                </ul>
+            </div>
+            </div>
+            </div>
+           
+            <asp:ContentPlaceHolder ID="LynxMasterPage" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer id="FooterContainer">
+                <div class="Footerpart1">
+                    <div class="col1-f1">
+                        <h3>GENERAL</h3>
+                         <ul>
+                    <li class="list"><a href="#">ABOUT US</a><span>><a href="#">EVENTS</a></span></li>
+                    <li class="list"><a href="#">FAQ'S</a><span>><a href="#">NVSP</a></span></li>
+                    <li class="list"><a href="#">INVESTORS SECTION</a></li>
+                    <li class="list"><a href="#">CAREER</a></li>
+                    <li class="list"><a href="#">NEWS</a></li>
+                    <li class="list"><a href="#">FEEDBACK</a></li>
+
+                       </ul> 
+                    </div>
+                    <div class="col2-f1">
+                         <h3>OUR BRANDS</h3>
+                         <ul>
+                    <li class="list"><a href="#">LYNX DIRECTOR'S CUT</a><span>><a href="#">LYNX LUXE</a></span></li>
+                    <li class="list"><a href="#">LYNX PICTURES</a><span>><a href="#">LYNX P[XL]</a></span></li>
+                    <li class="list"><a href="#">LYNX IMAX</a><span>><a href="#">LYNX ONYX</a></span></li>
+                    <li class="list"><a href="#">LYNX 4DX</a><span>><a href="#">LYNX NEST</a></span></li>
+                    <li class="list"><a href="#">PLAYHOUSE</a><span>><a href="#">V PRISTINE</a></span></li>
+                    <li class="list"><a href="#">LYNX GOLD</a></li>
+
+                       </ul> 
+                    </div>
+                    <div class="col3-f1">
+                         <h3>CINEMAS</h3>
+                         <ul>
+                    <li class="list"><a href="#">CINEMAS</a></li>
+                    <li class="list"><a href="#">UPCOMING</a></li>
+                    <li class="list"><a href="#">ADVERTISE</a></li>
+                    <li class="list"><a href="#">BEYOND MOVIES</a></li>
+                    <li class="list"><a href="#">BIRTHDAY REQUEST</a></li>
+                    <li class="list"><a href="#">SUBSCRIBE TO NEWSLETTER</a></li>
+
+                       </ul> 
+                    </div>
+                </div>
+                <div class="Footerpart2">
+                    <div class="row1-f2">
+                        <img src="images/Paytm-Logo.wine.png" alt="supports" class="supportimage"/>
+                        <img src="images/notonsecure.png" alt="supports"class="supportimage"/>
+                        <a href="#">PRIVACY<br />POLICY</a>
+                        <a href="#">TERMS &<br />CONDITIONS</a>
+                        <a href="#">TERMS OF<br />USE</a>
+                         <img src="images/facebook.png" alt="socialmedia" class="socialmediastart"/>
+                         <img src="images/google-plus.png" alt="socialmedia" class="socialmedia"/>
+                         <img src="images/youtube.png" alt="socialmedia" class="socialmedia"/>
+                         <img src="images/twitter.png" alt="socialmedia" class="socialmedia"/>
+                         <img src="images/instagram.png" alt="socialmedia" class="socialmedia"/>
+                         <img src="images/linkedin.png" alt="socialmedia" class="socialmedia"/>
+                    </div>
+                    <div class="row2-f2">
+                        <p>COPYRIGHT © 2022 LYNX CINEMAS LTD. ALL RIGHTS RESERVED.</p>
+                    </div>
+                </div>
+        </footer>
+        </div>
+        
+    </form>
+      <script src="javascript/LynxmasterJavascript.js"></script>
+</body>
+</html>
